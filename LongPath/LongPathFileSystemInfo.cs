@@ -371,7 +371,7 @@ namespace LongPath
                 this.isDirectory,
                 !this.isDirectory).ToList();
 
-            this.entryData   = foundFiles.Any() ? foundFiles.First() : (Win32FindData?)null;
+            this.entryData   = foundFiles.Count > 0 ? foundFiles[0] : (Win32FindData?)null;
             this.initialized = true;
         }
 
